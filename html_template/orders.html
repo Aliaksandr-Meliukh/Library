@@ -4,18 +4,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Users List</title>
+    <title>Orders List</title>
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="index.html"><img src="img/logo.svg" height="42" width="42" class="d-inline-block" alt=""> Grill Bar</a>
+    <a class="navbar-brand" href="index.html"><img src="img/logo.svg" height="42" width="42" class="d-inline-block"
+                                                   alt=""> Grill Bar</a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -36,6 +39,10 @@
 
 <header>
 
+    <nav id="main-header"
+         class="py-1 mb-3 navbar navbar-expand-sm navbar-light bg-light text-dark">
+        <span class="navbar-brand text-uppercase mr-auto">Orders</span>
+    </nav>
 </header>
 
 <section>
@@ -49,27 +56,113 @@
                         <table class="table table-striped">
                             <thead class="thead-inverse">
                             <tr>
-                                <th>Dish</th>
-                                <th>Weight</th>
-                                <th>Price</th>
-                                <th></th>
+                                <th scope="col">#</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Date</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <td>Chipotle Mango Chicken<br/><span class="font-weight-lighter">sweet & smoky with jasmine rice, seasonal vegetables, fresh avocado & salsa fresca</span>
+                                <td><span>100</span>
                                 </td>
-                                <td>500 g</td>
                                 <td>$50.00</td>
+                                <td>Waiting for confirmation</td>
+                                <td>10/05/2019</td>
                                 <td class="text-right">
-                                    <a href="dish.html"
+                                    <a href="#"
                                        class="btn-sm btn-outline-secondary"
                                        title="Edit department"
                                        data-toggle="tooltip"
                                        data-placement="top">
-                                        <i class="fa fa-plus"></i> <span
-                                            class="d-none d-md-inline">Buy</span></a>
-                                    <a href="dish.html"
+                                        <i class="fa fa-pencil"></i> <span
+                                            class="d-none d-md-inline">Edit</span></a>
+                                    <span data-toggle="modal" data-target="#deleteDialog">
+                                <a href="#" class="btn-sm btn-outline-secondary"
+                                   title="delete department"
+                                   data-toggle="tooltip"
+                                   data-placement="top">
+                                    <i class="fa fa-remove"></i> <span class="d-none d-md-inline">Delete</span></a>
+                                </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>100</span>
+                                </td>
+                                <td>$50.00</td>
+                                <td>Payed</td>
+                                <td>10/05/2019</td>
+                                <td class="text-right">
+                                    <a href="#"
+                                       class="btn-sm btn-outline-secondary"
+                                       title="Edit department"
+                                       data-toggle="tooltip"
+                                       data-placement="top">
+                                        <i class="fa fa-pencil"></i> <span
+                                            class="d-none d-md-inline">Edit</span></a>
+                                    <span data-toggle="modal" data-target="#deleteDialog">
+                                <a href="#" class="btn-sm btn-outline-secondary"
+                                   title="delete department"
+                                   data-toggle="tooltip"
+                                   data-placement="top">
+                                    <i class="fa fa-remove"></i> <span class="d-none d-md-inline">Delete</span></a>
+                                </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>100</span>
+                                </td>
+                                <td>$50.00</td>
+                                <td>Сonfirmed</td>
+                                <td>10/05/2019</td>
+                                <td class="text-right">
+                                    <a href="#"
+                                       class="btn-sm btn-outline-secondary"
+                                       title="Edit department"
+                                       data-toggle="tooltip"
+                                       data-placement="top">
+                                        <i class="fa fa-pencil"></i> <span
+                                            class="d-none d-md-inline">Edit</span></a>
+                                    <span data-toggle="modal" data-target="#deleteDialog">
+                                <a href="#" class="btn-sm btn-outline-secondary"
+                                   title="delete department"
+                                   data-toggle="tooltip"
+                                   data-placement="top">
+                                    <i class="fa fa-remove"></i> <span class="d-none d-md-inline">Delete</span></a>
+                                </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>100</span>
+                                </td>
+                                <td>$50.00</td>
+                                <td>Payed</td>
+                                <td>10/05/2019</td>
+                                <td class="text-right">
+                                    <a href="#"
+                                       class="btn-sm btn-outline-secondary"
+                                       title="Edit department"
+                                       data-toggle="tooltip"
+                                       data-placement="top">
+                                        <i class="fa fa-pencil"></i> <span
+                                            class="d-none d-md-inline">Edit</span></a>
+                                    <span data-toggle="modal" data-target="#deleteDialog">
+                                <a href="#" class="btn-sm btn-outline-secondary"
+                                   title="delete department"
+                                   data-toggle="tooltip"
+                                   data-placement="top">
+                                    <i class="fa fa-remove"></i> <span class="d-none d-md-inline">Delete</span></a>
+                                </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>100</span>
+                                </td>
+                                <td>$50.00</td>
+                                <td>Payed</td>
+                                <td>10/05/2019</td>
+                                <td class="text-right">
+                                    <a href="#"
                                        class="btn-sm btn-outline-secondary"
                                        title="Edit department"
                                        data-toggle="tooltip"
@@ -87,6 +180,19 @@
                             </tr>
                             </tbody>
                         </table>
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -94,8 +200,26 @@
 
     </section>
 </section>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+<!-- Footer -->
+<footer class="page-footer font-small teal pt-4">
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2019 Copyright:
+        <a href="#"> Bar.com</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
 </body>
 </html>
