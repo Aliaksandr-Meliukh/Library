@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -15,9 +16,11 @@
 
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="index.html"><img src="img/logo.svg" height="42" width="42" class="d-inline-block" alt=""> Grill Bar</a>
+    <a class="navbar-brand" href="index.html"><img src="img/logo.svg" height="42" width="42" class="d-inline-block"
+                                                   alt=""> Grill Bar</a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -42,7 +45,8 @@
                title="View order"
                data-toggle="tooltip"
                data-placement="bottom">
-                <span class="badge badge-pill bg-dark align-text-bottom">0</span><i class="fa fa-shopping-cart"></i><span
+                <span class="badge badge-pill bg-dark align-text-bottom">0</span><i
+                    class="fa fa-shopping-cart"></i><span
                     class="d-none d-sm-inline"> Cart</span></a>
         </li>
     </ul>
@@ -51,9 +55,21 @@
 
 <header>
 
-    <nav id="main-header"
-         class="py-1 mb-3 navbar navbar-expand-sm navbar-light bg-light text-dark">
-        <span class="navbar-brand text-uppercase mr-auto">Menu</span>
+    <nav id="main-header" class="py-1 mb-3 navbar navbar-expand-sm navbar-light bg-light text-dark">
+
+        <ul class="nav nav-tabs collapse navbar-collapse" id="navbarSupportedContent">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Burgers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Steaks</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Mains</a>
+            </li>
+        </ul>
+
+
         <ul class="navbar-nav float-right">
             <li class="nav-item">
                 <a href="dish.html"
@@ -68,55 +84,229 @@
     </nav>
 </header>
 
+
+
 <section>
-    <div class="album py-5 bg-light">
-        <div class="container">
+    <section id="menu">
+        <div class="container-fluid">
             <div class="row">
+                <div class="col">
+                    <div class="card">
 
-                <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm">
-                        <img src="img/Dishes/chipotle-mango-chicken.jpg" class="d-inline-block" alt="" height="220">
-                        <div class="card-body">
-                            <p class="card-text">Chipotle Mango Chicken<br/>
-                            <span class="font-weight-lighter">sweet & smoky with jasmine rice, seasonal vegetables, fresh avocado & salsa fresca</span>
-                            </p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">To cart</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Delete</button>
-                                </div>
-                                <small class="text-muted">Price: 50 USD</small>
-                            </div>
-                        </div>
+                        <table class="table table-striped">
+                            <thead class="thead-inverse">
+                            <tr>
+                                <th scope="col">Title</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Count</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Steak Bites</td>
+                                <td>tender marinated bites of rump steak, served with whisky horseradish aioli & sweet dijon dip
+                                </td>
+                                <td>$8.95</td>
+
+                                <td>
+                                    <input type="number" min="1" max="20" step="1" value="1" />
+                                </td>
+                                <td class="text-right">
+                                    <a href="#"
+                                       class="btn-sm btn-outline-secondary"
+                                       title="Add to cart"
+                                       data-toggle="tooltip"
+                                       data-placement="top">
+                                        <i class="fa fa-plus"></i>
+                                        <span class="d-none d-md-inline">To cart</span>
+                                    </a>
+                                    <a href="#"
+                                       class="btn-sm btn-outline-secondary"
+                                       title="Edit dish"
+                                       data-toggle="tooltip"
+                                       data-placement="top">
+                                        <i class="fa fa-pencil"></i>
+                                        <span class="d-none d-lg-inline">Edit</span>
+                                    </a>
+                                    <span data-toggle="modal" data-target="#deleteDialog">
+                                         <a href="#" class="btn-sm btn-outline-secondary"
+                                            title="Delete dish"
+                                            data-toggle="tooltip"
+                                            data-placement="top">
+                                             <i class="fa fa-remove"></i>
+                                             <span class="d-none d-lg-inline">Delete</span
+                                         </a>
+                                    </span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mini Mac Sliders</td>
+                                <td>three beef sliders with burger relish, american cheese, dill pickles & onions on sesame seed buns</td>
+                                <td>$8.25</td>
+                                <td>
+                                    <input type="number" min="1" max="20" step="1" value="1" />
+                                </td>
+                                <td class="text-right">
+                                    <a href="#"
+                                       class="btn-sm btn-outline-secondary"
+                                       title="Add to cart"
+                                       data-toggle="tooltip"
+                                       data-placement="top">
+                                        <i class="fa fa-plus"></i>
+                                        <span class="d-none d-md-inline">To cart</span>
+                                    </a>
+                                    <a href="#"
+                                       class="btn-sm btn-outline-secondary"
+                                       title="Edit dish"
+                                       data-toggle="tooltip"
+                                       data-placement="top">
+                                        <i class="fa fa-pencil"></i>
+                                        <span class="d-none d-lg-inline">Edit</span>
+                                    </a>
+                                    <span data-toggle="modal" data-target="#deleteDialog">
+                                         <a href="#" class="btn-sm btn-outline-secondary"
+                                            title="Delete dish"
+                                            data-toggle="tooltip"
+                                            data-placement="top">
+                                             <i class="fa fa-remove"></i>
+                                             <span class="d-none d-lg-inline">Delete</span
+                                         </a>
+                                    </span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Chipotle Mango Chicken</td>
+                                <td>sweet & smoky with jasmine rice, seasonal vegetables, fresh avocado & salsa fresca</td>
+                                <td>$50.00</td>
+
+                                <td>
+                                    <input type="number" min="1" max="20" step="1" value="1" />
+                                </td>
+                                <td class="text-right">
+                                    <a href="#"
+                                       class="btn-sm btn-outline-secondary"
+                                       title="Add to cart"
+                                       data-toggle="tooltip"
+                                       data-placement="top">
+                                        <i class="fa fa-plus"></i>
+                                        <span class="d-none d-md-inline">To cart</span>
+                                    </a>
+                                    <a href="#"
+                                       class="btn-sm btn-outline-secondary"
+                                       title="Edit dish"
+                                       data-toggle="tooltip"
+                                       data-placement="top">
+                                        <i class="fa fa-pencil"></i>
+                                        <span class="d-none d-lg-inline">Edit</span>
+                                    </a>
+                                    <span data-toggle="modal" data-target="#deleteDialog">
+                                         <a href="#" class="btn-sm btn-outline-secondary"
+                                            title="Delete dish"
+                                            data-toggle="tooltip"
+                                            data-placement="top">
+                                             <i class="fa fa-remove"></i>
+                                             <span class="d-none d-lg-inline">Delete</span
+                                         </a>
+                                    </span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Chipotle Mango Chicken</td>
+                                <td>sweet & smoky with jasmine rice, seasonal vegetables, fresh avocado & salsa fresca</td>
+                                <td>$50.00</td>
+
+                                <td>
+                                    <input type="number" min="1" max="20" step="1" value="1" />
+                                </td>
+                                <td class="text-right">
+                                    <a href="#"
+                                       class="btn-sm btn-outline-secondary"
+                                       title="Add to cart"
+                                       data-toggle="tooltip"
+                                       data-placement="top">
+                                        <i class="fa fa-plus"></i>
+                                        <span class="d-none d-md-inline">To cart</span>
+                                    </a>
+                                    <a href="#"
+                                       class="btn-sm btn-outline-secondary"
+                                       title="Edit dish"
+                                       data-toggle="tooltip"
+                                       data-placement="top">
+                                        <i class="fa fa-pencil"></i>
+                                        <span class="d-none d-lg-inline">Edit</span>
+                                    </a>
+                                    <span data-toggle="modal" data-target="#deleteDialog">
+                                         <a href="#" class="btn-sm btn-outline-secondary"
+                                            title="Delete dish"
+                                            data-toggle="tooltip"
+                                            data-placement="top">
+                                             <i class="fa fa-remove"></i>
+                                             <span class="d-none d-lg-inline">Delete</span
+                                         </a>
+                                    </span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Chipotle Mango Chicken</td>
+                                <td>sweet & smoky with jasmine rice, seasonal vegetables, fresh avocado & salsa fresca</td>
+                                <td>$50.00</td>
+
+                                <td>
+                                    <input type="number" min="1" max="20" step="1" value="1" />
+                                </td>
+                                <td class="text-right">
+                                    <a href="#"
+                                       class="btn-sm btn-outline-secondary"
+                                       title="Add to cart"
+                                       data-toggle="tooltip"
+                                       data-placement="top">
+                                        <i class="fa fa-plus"></i>
+                                        <span class="d-none d-md-inline">To cart</span>
+                                    </a>
+                                    <a href="#"
+                                       class="btn-sm btn-outline-secondary"
+                                       title="Edit dish"
+                                       data-toggle="tooltip"
+                                       data-placement="top">
+                                        <i class="fa fa-pencil"></i>
+                                        <span class="d-none d-lg-inline">Edit</span>
+                                    </a>
+                                    <span data-toggle="modal" data-target="#deleteDialog">
+                                         <a href="#" class="btn-sm btn-outline-secondary"
+                                            title="Delete dish"
+                                            data-toggle="tooltip"
+                                            data-placement="top">
+                                             <i class="fa fa-remove"></i>
+                                             <span class="d-none d-lg-inline">Delete</span
+                                         </a>
+                                    </span>
+
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
                     </div>
                 </div>
-
-                <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm">
-                        <img src="img/default_picture.svg" class="d-inline-block" alt="">
-                        <div class="card-body">
-                            <p class="card-text">Chipotle Mango Chicken<br/>
-                                <span class="font-weight-lighter">sweet & smoky with jasmine rice, seasonal vegetables, fresh avocado & salsa fresca</span>
-                            </p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Buy</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Delete</button>
-                                </div>
-                                <small class="text-muted">Price: 50 USD</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
 
+    </section>
 </section>
 
-<footer>
+
+<!-- Footer -->
+<footer class="page-footer font-small teal pt-4">
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2019 Copyright:
+        <a href="#"> Bar.com</a>
+    </div>
+    <!-- Copyright -->
 </footer>
 
 
@@ -126,7 +316,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header alert-danger">
-                <h5 class="modal-title" id="exampleModalLabel">Delete department</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Delete dish</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -142,13 +332,19 @@
     </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 <script>
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
     })
-</script
+</script>
 </body>
 </html>
