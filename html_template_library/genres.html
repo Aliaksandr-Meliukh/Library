@@ -9,15 +9,14 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Menu List</title>
+    <title>Genres</title>
 </head>
 
 <body>
 
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="index.html"><img src="img/logo.svg" height="42" width="42" class="d-inline-block"
-                                                   alt=""> Grill Bar</a>
+                                                   alt=""> Library</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
             aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,49 +26,17 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-                <a class="nav-link" href="menu.html">Menu<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="genres.html">Genres</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="orders.html">Orders</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="bills.html">Bills</a>
+                <a class="nav-link" href="books.html">Books</a>
             </li>
         </ul>
     </div>
-
-    <ul class="navbar-nav float-right">
-        <li class="nav-item">
-            <a href="order.html"
-               class="btn btn-dark"
-               title="View order"
-               data-toggle="tooltip"
-               data-placement="bottom">
-                <span class="badge badge-pill bg-dark align-text-bottom">0</span><i
-                    class="fa fa-shopping-cart"></i><span
-                    class="d-none d-sm-inline"> Cart</span></a>
-        </li>
-    </ul>
 </nav>
 
-
 <header>
-
     <nav id="main-header" class="py-1 mb-3 navbar navbar-expand-sm navbar-light bg-light text-dark">
-
-        <ul class="nav nav-tabs collapse navbar-collapse" id="navbarSupportedContent">
-            <li class="nav-item">
-                <a class="nav-link active" href="#">Burgers</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Steaks</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Mains</a>
-            </li>
-        </ul>
-
-
         <ul class="navbar-nav float-right">
             <li class="nav-item">
                 <a href="dish.html"
@@ -78,49 +45,34 @@
                    data-toggle="tooltip"
                    data-placement="bottom">
                     <i class="fa fa-plus"></i> <span
-                        class="d-none d-sm-inline">Add new dish</span></a>
+                        class="d-none d-sm-inline">Add new genre</span></a>
             </li>
         </ul>
     </nav>
 </header>
 
-
-
 <section>
-    <section id="menu">
+    <section id="GenresList">
         <div class="container-fluid">
             <div class="row">
                 <div class="col">
                     <div class="card">
-
                         <table class="table table-striped">
                             <thead class="thead-inverse">
                             <tr>
-                                <th scope="col">Title</th>
-                                <th scope="col">Description</th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Count</th>
+                                <th scope="col">Genre</th>
+                                <th scope="col">Total books</th>
+                                <th scope="col">On hands</th>
+                                <th scope="col">In the hall</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <td>Steak Bites</td>
-                                <td>tender marinated bites of rump steak, served with whisky horseradish aioli & sweet dijon dip
-                                </td>
-                                <td>$8.95</td>
-
-                                <td>
-                                    <input type="number" min="1" max="20" step="1" value="1" />
-                                </td>
+                                <td>Fiction</td>
+                                <td>100</td>
+                                <td>10</td>
+                                <td>2</td>
                                 <td class="text-right">
-                                    <a href="#"
-                                       class="btn-sm btn-outline-secondary"
-                                       title="Add to cart"
-                                       data-toggle="tooltip"
-                                       data-placement="top">
-                                        <i class="fa fa-plus"></i>
-                                        <span class="d-none d-md-inline">To cart</span>
-                                    </a>
                                     <a href="#"
                                        class="btn-sm btn-outline-secondary"
                                        title="Edit dish"
@@ -135,28 +87,17 @@
                                             data-toggle="tooltip"
                                             data-placement="top">
                                              <i class="fa fa-remove"></i>
-                                             <span class="d-none d-lg-inline">Delete</span
+                                             <span class="d-none d-lg-inline">Delete</span>
                                          </a>
                                     </span>
-
                                 </td>
                             </tr>
                             <tr>
-                                <td>Mini Mac Sliders</td>
-                                <td>three beef sliders with burger relish, american cheese, dill pickles & onions on sesame seed buns</td>
-                                <td>$8.25</td>
-                                <td>
-                                    <input type="number" min="1" max="20" step="1" value="1" />
-                                </td>
+                                <td>Children's literature</td>
+                                <td>55</td>
+                                <td>1</td>
+                                <td>20</td>
                                 <td class="text-right">
-                                    <a href="#"
-                                       class="btn-sm btn-outline-secondary"
-                                       title="Add to cart"
-                                       data-toggle="tooltip"
-                                       data-placement="top">
-                                        <i class="fa fa-plus"></i>
-                                        <span class="d-none d-md-inline">To cart</span>
-                                    </a>
                                     <a href="#"
                                        class="btn-sm btn-outline-secondary"
                                        title="Edit dish"
@@ -171,29 +112,17 @@
                                             data-toggle="tooltip"
                                             data-placement="top">
                                              <i class="fa fa-remove"></i>
-                                             <span class="d-none d-lg-inline">Delete</span
+                                             <span class="d-none d-lg-inline">Delete</span>
                                          </a>
                                     </span>
-
                                 </td>
                             </tr>
                             <tr>
-                                <td>Chipotle Mango Chicken</td>
-                                <td>sweet & smoky with jasmine rice, seasonal vegetables, fresh avocado & salsa fresca</td>
-                                <td>$50.00</td>
-
-                                <td>
-                                    <input type="number" min="1" max="20" step="1" value="1" />
-                                </td>
+                                <td>Non-fiction</td>
+                                <td>255</td>
+                                <td>35</td>
+                                <td>14</td>
                                 <td class="text-right">
-                                    <a href="#"
-                                       class="btn-sm btn-outline-secondary"
-                                       title="Add to cart"
-                                       data-toggle="tooltip"
-                                       data-placement="top">
-                                        <i class="fa fa-plus"></i>
-                                        <span class="d-none d-md-inline">To cart</span>
-                                    </a>
                                     <a href="#"
                                        class="btn-sm btn-outline-secondary"
                                        title="Edit dish"
@@ -208,29 +137,17 @@
                                             data-toggle="tooltip"
                                             data-placement="top">
                                              <i class="fa fa-remove"></i>
-                                             <span class="d-none d-lg-inline">Delete</span
+                                             <span class="d-none d-lg-inline">Delete</span>
                                          </a>
                                     </span>
-
                                 </td>
                             </tr>
                             <tr>
-                                <td>Chipotle Mango Chicken</td>
-                                <td>sweet & smoky with jasmine rice, seasonal vegetables, fresh avocado & salsa fresca</td>
-                                <td>$50.00</td>
-
-                                <td>
-                                    <input type="number" min="1" max="20" step="1" value="1" />
-                                </td>
+                                <td>Business literature</td>
+                                <td>400</td>
+                                <td>200</td>
+                                <td>20</td>
                                 <td class="text-right">
-                                    <a href="#"
-                                       class="btn-sm btn-outline-secondary"
-                                       title="Add to cart"
-                                       data-toggle="tooltip"
-                                       data-placement="top">
-                                        <i class="fa fa-plus"></i>
-                                        <span class="d-none d-md-inline">To cart</span>
-                                    </a>
                                     <a href="#"
                                        class="btn-sm btn-outline-secondary"
                                        title="Edit dish"
@@ -245,29 +162,17 @@
                                             data-toggle="tooltip"
                                             data-placement="top">
                                              <i class="fa fa-remove"></i>
-                                             <span class="d-none d-lg-inline">Delete</span
+                                             <span class="d-none d-lg-inline">Delete</span>
                                          </a>
                                     </span>
-
                                 </td>
                             </tr>
                             <tr>
-                                <td>Chipotle Mango Chicken</td>
-                                <td>sweet & smoky with jasmine rice, seasonal vegetables, fresh avocado & salsa fresca</td>
-                                <td>$50.00</td>
-
-                                <td>
-                                    <input type="number" min="1" max="20" step="1" value="1" />
-                                </td>
+                                <td>Psychology</td>
+                                <td>100</td>
+                                <td>10</td>
+                                <td>2</td>
                                 <td class="text-right">
-                                    <a href="#"
-                                       class="btn-sm btn-outline-secondary"
-                                       title="Add to cart"
-                                       data-toggle="tooltip"
-                                       data-placement="top">
-                                        <i class="fa fa-plus"></i>
-                                        <span class="d-none d-md-inline">To cart</span>
-                                    </a>
                                     <a href="#"
                                        class="btn-sm btn-outline-secondary"
                                        title="Edit dish"
@@ -282,10 +187,134 @@
                                             data-toggle="tooltip"
                                             data-placement="top">
                                              <i class="fa fa-remove"></i>
-                                             <span class="d-none d-lg-inline">Delete</span
+                                             <span class="d-none d-lg-inline">Delete</span>
                                          </a>
                                     </span>
-
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Comics and manga</td>
+                                <td>100</td>
+                                <td>10</td>
+                                <td>2</td>
+                                <td class="text-right">
+                                    <a href="#"
+                                       class="btn-sm btn-outline-secondary"
+                                       title="Edit dish"
+                                       data-toggle="tooltip"
+                                       data-placement="top">
+                                        <i class="fa fa-pencil"></i>
+                                        <span class="d-none d-lg-inline">Edit</span>
+                                    </a>
+                                    <span data-toggle="modal" data-target="#deleteDialog">
+                                         <a href="#" class="btn-sm btn-outline-secondary"
+                                            title="Delete dish"
+                                            data-toggle="tooltip"
+                                            data-placement="top">
+                                             <i class="fa fa-remove"></i>
+                                             <span class="d-none d-lg-inline">Delete</span>
+                                         </a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Foreign languages</td>
+                                <td>100</td>
+                                <td>10</td>
+                                <td>2</td>
+                                <td class="text-right">
+                                    <a href="#"
+                                       class="btn-sm btn-outline-secondary"
+                                       title="Edit dish"
+                                       data-toggle="tooltip"
+                                       data-placement="top">
+                                        <i class="fa fa-pencil"></i>
+                                        <span class="d-none d-lg-inline">Edit</span>
+                                    </a>
+                                    <span data-toggle="modal" data-target="#deleteDialog">
+                                         <a href="#" class="btn-sm btn-outline-secondary"
+                                            title="Delete dish"
+                                            data-toggle="tooltip"
+                                            data-placement="top">
+                                             <i class="fa fa-remove"></i>
+                                             <span class="d-none d-lg-inline">Delete</span>
+                                         </a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>The medicine</td>
+                                <td>100</td>
+                                <td>10</td>
+                                <td>2</td>
+                                <td class="text-right">
+                                    <a href="#"
+                                       class="btn-sm btn-outline-secondary"
+                                       title="Edit dish"
+                                       data-toggle="tooltip"
+                                       data-placement="top">
+                                        <i class="fa fa-pencil"></i>
+                                        <span class="d-none d-lg-inline">Edit</span>
+                                    </a>
+                                    <span data-toggle="modal" data-target="#deleteDialog">
+                                         <a href="#" class="btn-sm btn-outline-secondary"
+                                            title="Delete dish"
+                                            data-toggle="tooltip"
+                                            data-placement="top">
+                                             <i class="fa fa-remove"></i>
+                                             <span class="d-none d-lg-inline">Delete</span>
+                                         </a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Cooking and Drinks</td>
+                                <td>100</td>
+                                <td>10</td>
+                                <td>2</td>
+                                <td class="text-right">
+                                    <a href="#"
+                                       class="btn-sm btn-outline-secondary"
+                                       title="Edit dish"
+                                       data-toggle="tooltip"
+                                       data-placement="top">
+                                        <i class="fa fa-pencil"></i>
+                                        <span class="d-none d-lg-inline">Edit</span>
+                                    </a>
+                                    <span data-toggle="modal" data-target="#deleteDialog">
+                                         <a href="#" class="btn-sm btn-outline-secondary"
+                                            title="Delete dish"
+                                            data-toggle="tooltip"
+                                            data-placement="top">
+                                             <i class="fa fa-remove"></i>
+                                             <span class="d-none d-lg-inline">Delete</span>
+                                         </a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Beauty, health, sport</td>
+                                <td>100</td>
+                                <td>10</td>
+                                <td>2</td>
+                                <td class="text-right">
+                                    <a href="#"
+                                       class="btn-sm btn-outline-secondary"
+                                       title="Edit dish"
+                                       data-toggle="tooltip"
+                                       data-placement="top">
+                                        <i class="fa fa-pencil"></i>
+                                        <span class="d-none d-lg-inline">Edit</span>
+                                    </a>
+                                    <span data-toggle="modal" data-target="#deleteDialog">
+                                         <a href="#" class="btn-sm btn-outline-secondary"
+                                            title="Delete dish"
+                                            data-toggle="tooltip"
+                                            data-placement="top">
+                                             <i class="fa fa-remove"></i>
+                                             <span class="d-none d-lg-inline">Delete</span>
+                                         </a>
+                                    </span>
                                 </td>
                             </tr>
                             </tbody>
@@ -316,7 +345,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header alert-danger">
-                <h5 class="modal-title" id="exampleModalLabel">Delete dish</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Delete genre</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
