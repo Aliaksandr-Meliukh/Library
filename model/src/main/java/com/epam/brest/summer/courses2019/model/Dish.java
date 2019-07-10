@@ -1,5 +1,7 @@
-package com.epam.courses.bar.model;
-
+package com.epam.brest.summer.courses2019.model;
+/**
+ * POJO Dish for model.
+ */
 public class Dish {
     public String getTitle() {
         return Title;
