@@ -7,7 +7,7 @@
     <artifactId>model</artifactId>
 
     <parent>
-        <artifactId>grill-bar</artifactId>
+        <artifactId>library</artifactId>
         <groupId>com.epam.brest.summer.courses2019</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
