@@ -1,72 +1,60 @@
 package com.epam.brest.summer.courses2019.model;
 
+import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import java.util.Date;
 
 public class BookTest {
 
-    @Test
-    public void getBookId() {
-    }
+    Book testBook = new Book();
 
     @Test
-    public void setBookId() {
+    public void getBookId() {
+        testBook.setBookId(1);
+        Assert.assertTrue(testBook.getBookId().equals(1));
     }
 
     @Test
     public void getBookTitle() {
-    }
-
-    @Test
-    public void setBookTitle() {
+        testBook.setBookTitle("Title");
+        Assert.assertTrue(testBook.getBookTitle().equals("Title"));
     }
 
     @Test
     public void getBookAuthor() {
-    }
-
-    @Test
-    public void setBookAuthor() {
+        testBook.setBookAuthor("Author");
+        Assert.assertTrue(testBook.getBookAuthor().equals("Author"));
     }
 
     @Test
     public void getGenreId() {
-    }
-
-    @Test
-    public void setGenreId() {
+        testBook.setGenreId(2);
+        Assert.assertTrue(testBook.getGenreId().equals(2));
     }
 
     @Test
     public void getQuantity() {
-    }
-
-    @Test
-    public void setQuantity() {
+        testBook.setQuantity(100);
+        Assert.assertTrue(testBook.getQuantity().equals(100));
     }
 
     @Test
     public void getBooksOnHands() {
-    }
-
-    @Test
-    public void setBooksOnHands() {
+        testBook.setBooksOnHands(20);
+        Assert.assertTrue(testBook.getBooksOnHands().equals(20));
     }
 
     @Test
     public void getBooksInHall() {
-    }
-
-    @Test
-    public void setBooksInHall() {
+        testBook.setBooksInHall(30);
+        Assert.assertTrue(testBook.getBooksInHall().equals(30));
     }
 
     @Test
     public void getLastIssueDate() {
-    }
-
-    @Test
-    public void setLastIssueDate() {
+        Date date = new Date();
+        testBook.setLastIssueDate(date);
+        Assert.assertTrue(testBook.getLastIssueDate().equals(date));
     }
 }

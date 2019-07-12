@@ -83,10 +83,20 @@ public class Book {
         this.bookTitle = bookTitle;
     }
 
+    /**
+     * Returns <code>String</code> representation of this bookAuthor.
+     *
+     * @return bookAuthor Book Author.
+     */
     public String getBookAuthor() {
         return bookAuthor;
     }
 
+    /**
+     * Sets the book's author.
+     *
+     * @param bookAuthor Book Author.
+     */
     public void setBookAuthor(String bookAuthor) {
         this.bookAuthor = bookAuthor;
     }
