@@ -14,6 +14,7 @@
 
   <modules>
     <module>model</module>
+    <module>dao</module>
   </modules>
 
   <distributionManagement>
@@ -50,7 +51,12 @@
       <dependency>
         <groupId>com.epam.brest.summer.courses2019</groupId>
         <artifactId>model</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.epam.brest.summer.courses2019</groupId>
+        <artifactId>dao</artifactId>
+        <version>${project.version}</version>
       </dependency>
       <dependency>
         <groupId>junit</groupId>
