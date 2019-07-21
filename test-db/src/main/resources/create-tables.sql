@@ -7,6 +7,6 @@ CREATE TABLE book (
                             quantity INT NOT NULL,
                             booksOnHands INT NOT NULL,
                             booksInHall INT NOT NULL,
-
+                            lastIssueDate DATE,
                             PRIMARY KEY (bookId)
 )

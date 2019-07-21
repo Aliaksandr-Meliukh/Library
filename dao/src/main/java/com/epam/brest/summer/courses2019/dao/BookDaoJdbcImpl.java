@@ -18,7 +18,7 @@ public class BookDaoJdbcImpl implements BookDao {
     private final NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
     private final static String SELECT_ALL =
-            "select d.bookId, d.bookTitle from book d";
+            "select b.bookId, b.bookTitle, b.bookAuthor,b.genreId,b.quantity,b.booksOnHands,b.booksInHall,b.lastIssueDate from book b";
 
     public BookDaoJdbcImpl(NamedParameterJdbcTemplate namedParameterJdbcTemplate) {
         this.namedParameterJdbcTemplate = namedParameterJdbcTemplate;
@@ -42,17 +42,23 @@ public class BookDaoJdbcImpl implements BookDao {
     @Override
     public List<Book> findAll() {
         List<Book> books =
-                namedParameterJdbcTemplate.query(SELECT_ALL, new DepartmentRowMapper());
+                namedParameterJdbcTemplate.query(SELECT_ALL, new BookRowMapper());
         return books;
     }
 
-    private class DepartmentRowMapper implements RowMapper<Book> {
+    private class BookRowMapper implements RowMapper<Book> {
         @Override
         public Book mapRow(ResultSet resultSet, int i) throws SQLException {
-            Book department = new Book();
-            department.setBookId(resultSet.getInt("bookId"));
-            department.setBookTitle(resultSet.getString("bookTitle"));
-            return department;
+            Book book = new Book();
+            book.setBookId(resultSet.getInt("bookId"));
+            book.setBookTitle(resultSet.getString("bookTitle"));
+            book.setBookAuthor(resultSet.getString("bookAuthor"));
+            book.setGenreId(resultSet.getInt("genreId"));
+            book.setQuantity(resultSet.getInt("quantity"));
+            book.setBooksOnHands(resultSet.getInt("booksOnHands"));
+            book.setBooksInHall(resultSet.getInt("booksInHall"));
+            book.setLastIssueDate(resultSet.getDate("lastIssueDate"));
+            return book;
         }
     }
 
