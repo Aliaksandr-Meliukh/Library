@@ -40,7 +40,7 @@
     <maven-javadoc-plugin.version>3.0.1</maven-javadoc-plugin.version>
     <maven-site-plugin.vesrion>3.7.1</maven-site-plugin.vesrion>
 
-    <checkstyle.version>8.22</checkstyle.version>
+    <checkstyle.version>8.29</checkstyle.version>
     <jacoco.version>0.8.2</jacoco.version>
     <jacoco.bundle.coveredratio.minimum>65%</jacoco.bundle.coveredratio.minimum>
   </properties>
